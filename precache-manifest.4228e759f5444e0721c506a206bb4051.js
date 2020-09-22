@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "6956d90409953a0ffcde",
-    "url": "/nim-finder/static/js/app.1047dbda.chunk.js"
+    "revision": "05459e2ed8f37c85a59d",
+    "url": "/nim-finder/static/js/app.8aa3fd0d.chunk.js"
   },
   {
     "revision": "cf3f1a2d711f002e6237",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/nim-finder/expo-service-worker.js"
   },
   {
-    "revision": "91dd85b41680045bf46d265016bd2bb1",
+    "revision": "b155308271d03496f56c0d9546f38cd9",
     "url": "/nim-finder/index.html"
   },
   {

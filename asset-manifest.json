@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/nim-finder/static/js/app.1047dbda.chunk.js",
-    "app.js.map": "/nim-finder/static/js/app.1047dbda.chunk.js.map",
+    "app.js": "/nim-finder/static/js/app.8aa3fd0d.chunk.js",
+    "app.js.map": "/nim-finder/static/js/app.8aa3fd0d.chunk.js.map",
     "runtime~app.js": "/nim-finder/static/js/runtime~app.bfc33435.js",
     "runtime~app.js.map": "/nim-finder/static/js/runtime~app.bfc33435.js.map",
     "static/js/2.cc5f5b44.chunk.js": "/nim-finder/static/js/2.cc5f5b44.chunk.js",
@@ -17,6 +17,6 @@
   "entrypoints": [
     "static/js/runtime~app.bfc33435.js",
     "static/js/2.cc5f5b44.chunk.js",
-    "static/js/app.1047dbda.chunk.js"
+    "static/js/app.8aa3fd0d.chunk.js"
   ]
 }
