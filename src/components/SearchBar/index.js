@@ -16,7 +16,7 @@ export default ({onChangeText}) => {
 const styles = StyleSheet.create({
     input:{
         borderWidth:1,
-        borderColor:'grey',
+        borderColor:'#ccc',
         borderRadius:5,
         paddingHorizontal:10,
         paddingVertical:5,

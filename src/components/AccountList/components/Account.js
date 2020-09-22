@@ -2,14 +2,12 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
 
-export default ({nama, nimTPB, nimJurusan, fakultas, jurusan, status}) => {
+export default ({nama, nim, jurusan}) => {
     return(
         <View style={styles.container}>
-            <Text>{nama}</Text>
-            <Text>{nimTPB}</Text>
-            <Text>{nimJurusan}</Text>
-            <Text>{fakultas}</Text>
-            <Text>{jurusan}</Text>
+            <Text style={styles.nama}>{nama}</Text>
+            <Text style={styles.nama}>{nim}</Text>
+            <Text style={styles.nama}>{jurusan}</Text>
         </View>
     )
 }
@@ -17,5 +15,11 @@ export default ({nama, nimTPB, nimJurusan, fakultas, jurusan, status}) => {
 const styles = StyleSheet.create({
     container:{
         flexDirection:'row',
+    },
+    nama:{
+        flex:1,
+        borderWidth:1,
+        borderColor:"#ccc",
+        padding:5,
     }
 })

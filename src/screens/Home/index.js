@@ -8,18 +8,20 @@ import {SEARCH} from './search'
 
 export default () => {
     const [keyword, setKeyword] = React.useState("")
+    const [timer, setTimer] = React.useState()
     const [search, {data, loading}] = useLazyQuery(SEARCH)
 
     const onChangeText = (text) => {
-        setKeyword(text)
-        if (keyword != "") {
-            search({
+        clearTimeout(timer)
+        if (text != ""){
+            setTimer(setTimeout(() => search({
                 variables:{
-                    keyword: keyword,
+                    keyword: text,
                     first: 20,
                 }
-            })
+            }), 500))
         }
+        setKeyword(text)
     }
 
     return(

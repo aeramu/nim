@@ -6,13 +6,19 @@ export default ({data}) => {
     return(
         <FlatList
             data={data}
+            ListHeaderComponent={() => (
+                data.length > 0 &&
+                <Account 
+                    nama='Nama'
+                    nim='NIM' 
+                    jurusan='Jurusan'
+                /> 
+            )}
             renderItem={({item}) => (
                 <Account 
                     nama={item.nama} 
-                    nimTPB={item.nimTPB} 
-                    nimJurusan={item.nimJurusan}
-                    fakultas={item.fakultas}
-                    jurusan={item.jurusan}
+                    nim={item.nimTPB + " " + item.nimJurusan}
+                    jurusan={item.fakultas + " " + item.jurusan}
                     status={item.status}
                 />
             )}
