@@ -2,6 +2,7 @@ import React from 'react'
 import {View, ActivityIndicator, StyleSheet} from 'react-native'
 import AccountList from '../../components/AccountList'
 import SearchBar from '../../components/SearchBar'
+import LoadMore from '../../components/LoadMore'
 
 import {useLazyQuery} from '@apollo/client'
 import {SEARCH} from './search'
@@ -9,7 +10,29 @@ import {SEARCH} from './search'
 export default () => {
     const [keyword, setKeyword] = React.useState("")
     const [timer, setTimer] = React.useState()
-    const [search, {data, loading}] = useLazyQuery(SEARCH)
+    const [search, {data, loading, fetchMore}] = useLazyQuery(SEARCH)
+
+    const loadMore = () => {
+        fetchMore({
+            variables:{
+                keyword: keyword,
+                first: 20,
+                after: data.search.pageInfo.endCursor
+            },
+            updateQuery: (previousResult, {fetchMoreResult}) => {
+                return {
+                    search:{
+                        __typename: previousResult.search.__typename,
+                        edges: [
+                            ...previousResult.search.edges,
+                            ...fetchMoreResult.search.edges,
+                        ],
+                        pageInfo: fetchMoreResult.search.pageInfo
+                    }
+                }
+            }
+        })
+    }
 
     const onChangeText = (text) => {
         clearTimeout(timer)
@@ -31,7 +54,10 @@ export default () => {
             />
             {loading
                 ?<ActivityIndicator/>
-                :<AccountList data={data && (keyword != "")? data.search.edges : []}/>
+                :<>
+                    <AccountList data={data && (keyword != "")? data.search.edges : []}/>
+                    {data && data.search.pageInfo.hasNextPage && <LoadMore onPress={() => loadMore()}/>}
+                </>
             }
         </View>
     )
