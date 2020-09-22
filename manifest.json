@@ -2,8 +2,8 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "lang": "en",
-  "name": "nim-finder",
-  "short_name": "nim-finder",
+  "name": "ITB NIM Finder",
+  "short_name": "ITB NIM Finder",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait",
   "icons": [
