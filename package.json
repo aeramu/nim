@@ -10,11 +10,11 @@
     "predeploy": "expo build:web"
   },
   "dependencies": {
-    "@apollo/react-hooks": "^4.0.0",
-    "apollo-boost": "^0.4.9",
+    "@apollo/client": "^3.2.0",
     "expo": "~38.0.8",
     "expo-status-bar": "^1.0.2",
     "gh-pages": "^3.1.0",
+    "graphql": "^15.3.0",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",

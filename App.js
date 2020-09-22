@@ -1,8 +1,12 @@
-import React from 'react';
+import React from 'react'
+import {ApolloProvider} from '@apollo/client'
+import {client} from './src/config/graphql'
 import Home from './src/screens/Home'
 
 export default function App() {
   return (
-    <Home/>
+    <ApolloProvider client={client}>
+      <Home/>
+    </ApolloProvider>
   );
 }
