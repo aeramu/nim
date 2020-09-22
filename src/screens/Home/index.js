@@ -8,7 +8,7 @@ import {SEARCH} from './search'
 
 export default () => {
     const [keyword, setKeyword] = React.useState("")
-    const [search, {data, loading}] = useLazyQuery(SEARCH)
+    const [search, {data}] = useLazyQuery(SEARCH)
 
     return(
         <View>
@@ -21,7 +21,7 @@ export default () => {
                     }
                 })}    
             />
-            <AccountList data={data}/>
+            <AccountList data={data? data.search.edges : []}/>
         </View>
     )
 }
