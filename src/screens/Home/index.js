@@ -3,6 +3,7 @@ import {View, ActivityIndicator, StyleSheet} from 'react-native'
 import AccountList from '../../components/AccountList'
 import SearchBar from '../../components/SearchBar'
 import LoadMore from '../../components/LoadMore'
+import Header from '../../components/Header'
 
 import {useLazyQuery} from '@apollo/client'
 import {SEARCH} from './search'
@@ -49,6 +50,7 @@ export default () => {
 
     return(
         <View style={styles.container}>
+            <Header/>
             <SearchBar 
                 onChangeText={(text) => onChangeText(text)} 
             />
