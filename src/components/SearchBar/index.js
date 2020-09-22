@@ -5,6 +5,7 @@ export default ({onChangeText}) => {
     return(
         <View>
             <TextInput
+                style={styles.input}
                 placeholder='Ketik nama atau NIM...' 
                 onChangeText={(text) => onChangeText(text)}
             />
@@ -13,5 +14,13 @@ export default ({onChangeText}) => {
 }
 
 const styles = StyleSheet.create({
+    input:{
+        borderWidth:1,
+        borderColor:'grey',
+        borderRadius:5,
+        paddingHorizontal:10,
+        paddingVertical:5,
+        width:300,
+    }
 })
 

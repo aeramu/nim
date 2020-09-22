@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, ActivityIndicator} from 'react-native'
+import {View, ActivityIndicator, StyleSheet} from 'react-native'
 import AccountList from '../../components/AccountList'
 import SearchBar from '../../components/SearchBar'
 
@@ -7,22 +7,36 @@ import {useLazyQuery} from '@apollo/client'
 import {SEARCH} from './search'
 
 export default () => {
-    const [search, {data, loading, fetchMore}] = useLazyQuery(SEARCH)
+    const [keyword, setKeyword] = React.useState("")
+    const [search, {data, loading}] = useLazyQuery(SEARCH)
+
+    const onChangeText = (text) => {
+        setKeyword(text)
+        if (keyword != "") {
+            search({
+                variables:{
+                    keyword: keyword,
+                    first: 20,
+                }
+            })
+        }
+    }
 
     return(
-        <View>
+        <View style={styles.container}>
             <SearchBar 
-                onChangeText={(text) => search({
-                    variables:{
-                        keyword: text,
-                        first: 20,
-                    }
-                })} 
+                onChangeText={(text) => onChangeText(text)} 
             />
             {loading
-                ?<AccountList data={data? data.search.edges : []}/>
-                :<ActivityIndicator/>
+                ?<ActivityIndicator/>
+                :<AccountList data={data && (keyword != "")? data.search.edges : []}/>
             }
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container:{
+        padding:15
+    }
+})
