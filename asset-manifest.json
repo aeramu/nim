@@ -1,22 +1,22 @@
 {
   "files": {
-    "app.js": "/nim-finder/static/js/app.d219f3c9.chunk.js",
-    "app.js.map": "/nim-finder/static/js/app.d219f3c9.chunk.js.map",
+    "app.js": "/nim-finder/static/js/app.4db35e80.chunk.js",
+    "app.js.map": "/nim-finder/static/js/app.4db35e80.chunk.js.map",
     "runtime~app.js": "/nim-finder/static/js/runtime~app.bfc33435.js",
     "runtime~app.js.map": "/nim-finder/static/js/runtime~app.bfc33435.js.map",
-    "static/js/2.a15c4877.chunk.js": "/nim-finder/static/js/2.a15c4877.chunk.js",
-    "static/js/2.a15c4877.chunk.js.map": "/nim-finder/static/js/2.a15c4877.chunk.js.map",
+    "static/js/2.755e1ae5.chunk.js": "/nim-finder/static/js/2.755e1ae5.chunk.js",
+    "static/js/2.755e1ae5.chunk.js.map": "/nim-finder/static/js/2.755e1ae5.chunk.js.map",
     "favicon-16.png": "/nim-finder/favicon-16.png",
     "favicon-32.png": "/nim-finder/favicon-32.png",
     "favicon.ico": "/nim-finder/favicon.ico",
     "index.html": "/nim-finder/index.html",
     "manifest.json": "/nim-finder/manifest.json",
     "serve.json": "/nim-finder/serve.json",
-    "static/js/2.a15c4877.chunk.js.LICENSE.txt": "/nim-finder/static/js/2.a15c4877.chunk.js.LICENSE.txt"
+    "static/js/2.755e1ae5.chunk.js.LICENSE.txt": "/nim-finder/static/js/2.755e1ae5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.bfc33435.js",
-    "static/js/2.a15c4877.chunk.js",
-    "static/js/app.d219f3c9.chunk.js"
+    "static/js/2.755e1ae5.chunk.js",
+    "static/js/app.4db35e80.chunk.js"
   ]
 }

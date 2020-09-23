@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/nim-finder/precache-manifest.9836e3bdc26c2c60a41e8d5474a38258.js"
+  "/nim-finder/precache-manifest.4d4a74ea82584d78e4d48201669beecc.js"
 );
 
 workbox.skipWaiting();
