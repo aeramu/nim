@@ -1,8 +1,9 @@
 import React from 'react'
 import {FlatList} from 'react-native'
 import Account from './components/Account'
+import LoadMore from '../LoadMore'
 
-export default ({data}) => {
+export default ({data, onPress, loadMore}) => {
     return(
         <FlatList
             data={data}
@@ -21,6 +22,11 @@ export default ({data}) => {
                     jurusan={item.fakultas + " " + item.jurusan}
                     status={item.status}
                 />
+            )}
+            ListFooterComponent={() => (
+                loadMore
+                ? <LoadMore onPress={() => onPress()}/>
+                : null
             )}
         />
     )

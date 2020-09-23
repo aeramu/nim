@@ -56,10 +56,12 @@ export default () => {
             />
             {loading
                 ?<ActivityIndicator/>
-                :<>
-                    <AccountList data={data && (keyword != "")? data.search.edges : []}/>
-                    {data && data.search.pageInfo.hasNextPage && <LoadMore onPress={() => loadMore()}/>}
-                </>
+                :
+                    <AccountList 
+                        data={data && (keyword != "")? data.search.edges : []} 
+                        loadMore={(keyword != "") && data && data.search.pageInfo.hasNextPage}
+                        onPress={() => loadMore()}
+                    />
             }
         </View>
     )
