@@ -1,22 +1,34 @@
 self.__precacheManifest = [
   {
-    "revision": "18c054adf2d86e18fae5",
-    "url": "/nim-finder/static/js/app.4db35e80.chunk.js"
+    "revision": "a2471e54af66882771e7",
+    "url": "/nim-finder/static/js/app.ec94a4d7.chunk.js"
   },
   {
     "revision": "cf3f1a2d711f002e6237",
     "url": "/nim-finder/static/js/runtime~app.bfc33435.js"
   },
   {
-    "revision": "d9f3609a684f508c2f41",
-    "url": "/nim-finder/static/js/2.755e1ae5.chunk.js"
+    "revision": "1122dbaa10a171e8d5fb",
+    "url": "/nim-finder/static/js/2.de53875a.chunk.js"
+  },
+  {
+    "revision": "3a2ba31570920eeb9b1d217cabe58315",
+    "url": "/nim-finder/./fonts/AntDesign.ttf"
+  },
+  {
+    "revision": "b70cea0339374107969eb53e5b1f603f",
+    "url": "/nim-finder/./fonts/FontAwesome5_Solid.ttf"
+  },
+  {
+    "revision": "c39278f7abfc798a241551194f55e29f",
+    "url": "/nim-finder/./fonts/FontAwesome5_Brands.ttf"
   },
   {
     "revision": "f3f68bf5b7dce8acae55c25f724625dd",
     "url": "/nim-finder/expo-service-worker.js"
   },
   {
-    "revision": "3691cc377585bfdc4a6481e5a0541fab",
+    "revision": "f6ff295bd29f979f69062da4dba6e3d1",
     "url": "/nim-finder/index.html"
   },
   {
@@ -29,7 +41,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "b268aeea718cc626b192da4fc353a7a2",
-    "url": "/nim-finder/static/js/2.755e1ae5.chunk.js.LICENSE.txt"
+    "url": "/nim-finder/static/js/2.de53875a.chunk.js.LICENSE.txt"
   },
   {
     "revision": "71033553ddc0843407efe54c23890fe2",
