@@ -1,9 +1,17 @@
 import React from 'react'
-import {Text} from 'react-native'
+import {View, Text, StyleSheet} from 'react-native'
 
 
 export default () => {
     return(
-        <Text>ITB NIM Finder</Text>
+        <View style={styles.container}>
+            <Text>ITB NIM Finder</Text>
+        </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container:{
+        alignItems:'center',
+    }
+})

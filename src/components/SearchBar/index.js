@@ -1,26 +1,39 @@
 import React from 'react'
 import {View, TextInput, StyleSheet} from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome5'
 
-export default ({onChangeText}) => {
+export default ({onChangeText, containerStyle}) => {
     return(
-        <View>
-            <TextInput
-                style={styles.input}
-                placeholder='Ketik nama atau NIM...' 
-                onChangeText={(text) => onChangeText(text)}
-            />
+        <View style={containerStyle}>
+            <View style={styles.container}>
+                <Icon
+                    name='search'
+                    size={15}
+                    color="#aaa"
+                    style={styles.icon}
+                />
+                <TextInput
+                    placeholder='Ketik nama atau NIM...' 
+                    onChangeText={(text) => onChangeText(text)}
+                    style={styles.input}
+                />
+            </View>
         </View>
+        
     )
 }
 
 const styles = StyleSheet.create({
+    container:{
+        flexDirection:'row',
+        alignItems:'center',
+    },
+    icon:{
+        marginRight:10,
+    },
     input:{
-        borderWidth:1,
-        borderColor:'#ccc',
-        borderRadius:5,
-        paddingHorizontal:10,
-        paddingVertical:5,
-        width:300,
+        flex:1,
+        outline:'none'
     }
 })
 

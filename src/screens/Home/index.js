@@ -1,8 +1,7 @@
 import React from 'react'
-import {View, ActivityIndicator, StyleSheet} from 'react-native'
+import {View, ActivityIndicator, StyleSheet, Dimensions} from 'react-native'
 import AccountList from '../../components/AccountList'
 import SearchBar from '../../components/SearchBar'
-import LoadMore from '../../components/LoadMore'
 import Header from '../../components/Header'
 
 import {useLazyQuery} from '@apollo/client'
@@ -51,24 +50,43 @@ export default () => {
     return(
         <View style={styles.container}>
             <Header/>
-            <SearchBar 
-                onChangeText={(text) => onChangeText(text)} 
-            />
-            {loading
-                ?<ActivityIndicator/>
-                :
-                    <AccountList 
-                        data={data && (keyword != "")? data.search.edges : []} 
-                        loadMore={(keyword != "") && data && data.search.pageInfo.hasNextPage}
-                        onPress={() => loadMore()}
-                    />
-            }
+            <View style={styles.roundedBox}>
+                <SearchBar 
+                    onChangeText={(text) => onChangeText(text)} 
+                    containerStyle={styles.searchBar}
+                />
+                {loading
+                    ?<ActivityIndicator/>
+                    :
+                        <AccountList 
+                            data={data && (keyword != "")? data.search.edges : []} 
+                            loadMore={(keyword != "") && data && data.search.pageInfo.hasNextPage}
+                            onPress={() => loadMore()}
+                        />
+                }
+            </View>
         </View>
     )
 }
 
+const screen = Dimensions.get('window')
+
 const styles = StyleSheet.create({
     container:{
-        padding:15
+        flex:1,
+        alignItems: screen.width > 800? 'center' : 'stretch',
+        paddingHorizontal: 15,
+    },
+    roundedBox:{
+        borderWidth:1,
+        borderRadius:20,
+        paddingHorizontal:15,
+        borderColor:"#aaa",
+        alignItems:'stretch',
+        width: screen.width > 800? 800 : 'auto'
+    },
+    searchBar:{
+        marginTop:8,
+        marginBottom:8
     }
 })
