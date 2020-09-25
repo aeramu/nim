@@ -7,12 +7,21 @@ import Header from '../../components/Header'
 import {useLazyQuery} from '@apollo/client'
 import {SEARCH} from './search'
 
+import * as Analytics from 'expo-firebase-analytics'
+
 export default () => {
     const [keyword, setKeyword] = React.useState("")
     const [timer, setTimer] = React.useState()
     const [search, {data, loading, fetchMore}] = useLazyQuery(SEARCH)
 
-    const loadMore = () => {
+    React.useEffect(async () => {
+        await Analytics.logEvent('Web accessed',{})
+    },[])
+
+    const loadMore = async () => {
+        await Analytics.logEvent('Load more',{
+            keyword: keyword
+        })
         fetchMore({
             variables:{
                 keyword: keyword,
@@ -37,12 +46,15 @@ export default () => {
     const onChangeText = (text) => {
         clearTimeout(timer)
         if (text != ""){
-            setTimer(setTimeout(() => {
+            setTimer(setTimeout(async () => {
                 search({
                     variables:{
                         keyword: text,
                         first: 20,
                     }
+                })
+                await Analytics.logEvent('Search',{
+                    keyword: text
                 })
                 setTimer(null)
             }, 500))
