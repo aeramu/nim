@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "a2471e54af66882771e7",
-    "url": "/nim-finder/static/js/app.ec94a4d7.chunk.js"
+    "revision": "bf894edae6baf8460be5",
+    "url": "/nim-finder/static/js/app.db38e845.chunk.js"
   },
   {
     "revision": "cf3f1a2d711f002e6237",
     "url": "/nim-finder/static/js/runtime~app.bfc33435.js"
   },
   {
-    "revision": "1122dbaa10a171e8d5fb",
-    "url": "/nim-finder/static/js/2.de53875a.chunk.js"
+    "revision": "1107a6720c54a2869b34",
+    "url": "/nim-finder/static/js/2.f93355b3.chunk.js"
   },
   {
     "revision": "3a2ba31570920eeb9b1d217cabe58315",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/nim-finder/expo-service-worker.js"
   },
   {
-    "revision": "f6ff295bd29f979f69062da4dba6e3d1",
+    "revision": "c25c5ddfd5c107acad6336e1c89f3eb1",
     "url": "/nim-finder/index.html"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/nim-finder/serve.json"
   },
   {
-    "revision": "b268aeea718cc626b192da4fc353a7a2",
-    "url": "/nim-finder/static/js/2.de53875a.chunk.js.LICENSE.txt"
+    "revision": "93058e062910b80680b59dd887f6f88a",
+    "url": "/nim-finder/static/js/2.f93355b3.chunk.js.LICENSE.txt"
   },
   {
     "revision": "71033553ddc0843407efe54c23890fe2",

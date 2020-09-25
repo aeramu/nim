@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/nim-finder/static/js/app.ec94a4d7.chunk.js",
-    "app.js.map": "/nim-finder/static/js/app.ec94a4d7.chunk.js.map",
+    "app.js": "/nim-finder/static/js/app.db38e845.chunk.js",
+    "app.js.map": "/nim-finder/static/js/app.db38e845.chunk.js.map",
     "runtime~app.js": "/nim-finder/static/js/runtime~app.bfc33435.js",
     "runtime~app.js.map": "/nim-finder/static/js/runtime~app.bfc33435.js.map",
-    "static/js/2.de53875a.chunk.js": "/nim-finder/static/js/2.de53875a.chunk.js",
-    "static/js/2.de53875a.chunk.js.map": "/nim-finder/static/js/2.de53875a.chunk.js.map",
+    "static/js/2.f93355b3.chunk.js": "/nim-finder/static/js/2.f93355b3.chunk.js",
+    "static/js/2.f93355b3.chunk.js.map": "/nim-finder/static/js/2.f93355b3.chunk.js.map",
     "fonts/AntDesign.ttf": "/nim-finder/./fonts/AntDesign.ttf",
     "fonts/FontAwesome5_Brands.ttf": "/nim-finder/./fonts/FontAwesome5_Brands.ttf",
     "fonts/FontAwesome5_Solid.ttf": "/nim-finder/./fonts/FontAwesome5_Solid.ttf",
@@ -15,11 +15,11 @@
     "index.html": "/nim-finder/index.html",
     "manifest.json": "/nim-finder/manifest.json",
     "serve.json": "/nim-finder/serve.json",
-    "static/js/2.de53875a.chunk.js.LICENSE.txt": "/nim-finder/static/js/2.de53875a.chunk.js.LICENSE.txt"
+    "static/js/2.f93355b3.chunk.js.LICENSE.txt": "/nim-finder/static/js/2.f93355b3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.bfc33435.js",
-    "static/js/2.de53875a.chunk.js",
-    "static/js/app.ec94a4d7.chunk.js"
+    "static/js/2.f93355b3.chunk.js",
+    "static/js/app.db38e845.chunk.js"
   ]
 }
