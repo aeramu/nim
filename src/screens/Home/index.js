@@ -37,12 +37,15 @@ export default () => {
     const onChangeText = (text) => {
         clearTimeout(timer)
         if (text != ""){
-            setTimer(setTimeout(() => search({
-                variables:{
-                    keyword: text,
-                    first: 20,
-                }
-            }), 500))
+            setTimer(setTimeout(() => {
+                search({
+                    variables:{
+                        keyword: text,
+                        first: 20,
+                    }
+                })
+                setTimer(null)
+            }, 500))
         }
         setKeyword(text)
     }
@@ -55,14 +58,17 @@ export default () => {
                     onChangeText={(text) => onChangeText(text)} 
                     containerStyle={styles.searchBar}
                 />
-                {loading
-                    ?<ActivityIndicator/>
-                    :
-                        <AccountList 
-                            data={data && (keyword != "")? data.search.edges : []} 
-                            loadMore={(keyword != "") && data && data.search.pageInfo.hasNextPage}
-                            onPress={() => loadMore()}
-                        />
+                {keyword == "" | timer
+                    ? <></>
+                    : loading
+                        ? <ActivityIndicator style={styles.activity}/>
+                        :
+                            <AccountList 
+                                data={data? data.search.edges : []} 
+                                loadMore={data && data.search.pageInfo.hasNextPage}
+                                onPress={() => loadMore()}
+                                containerStyle={styles.list}
+                            />
                 }
             </View>
         </View>
@@ -76,6 +82,7 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems: screen.width > 800? 'center' : 'stretch',
         paddingHorizontal: 15,
+        paddingBottom:30,
     },
     roundedBox:{
         borderWidth:1,
@@ -86,7 +93,17 @@ const styles = StyleSheet.create({
         width: screen.width > 800? 800 : 'auto'
     },
     searchBar:{
-        marginTop:8,
-        marginBottom:8
+        paddingTop:8,
+        paddingBottom:8,
+    },
+    activity:{
+        borderTopWidth:1,
+        borderTopColor:"#ccc",
+        paddingVertical:20
+    },
+    list:{
+        borderTopWidth:1,
+        borderTopColor:"#ccc",
+        paddingTop: 10,
     }
 })

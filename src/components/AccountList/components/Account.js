@@ -6,8 +6,8 @@ export default ({nama, nim, jurusan}) => {
     return(
         <View style={styles.container}>
             <Text style={styles.nama}>{nama}</Text>
-            <Text style={styles.nama}>{nim}</Text>
-            <Text style={styles.nama}>{jurusan}</Text>
+            <Text style={styles.nim}>{nim}</Text>
+            <Text style={styles.jurusan}>{jurusan}</Text>
         </View>
     )
 }
@@ -15,11 +15,20 @@ export default ({nama, nim, jurusan}) => {
 const styles = StyleSheet.create({
     container:{
         flexDirection:'row',
+        paddingTop:10,
+        paddingBottom:10,
+        borderBottomWidth:1,
+        borderBottomColor:"#ccc"
     },
     nama:{
-        flex:1,
-        borderWidth:1,
-        borderColor:"#ccc",
-        padding:5,
+        flex:5,
+        marginRight:5
+    },
+    nim:{
+        flex:3,
+        marginRight:5
+    },
+    jurusan:{
+        flex:4
     }
 })

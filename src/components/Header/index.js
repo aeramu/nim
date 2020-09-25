@@ -5,7 +5,7 @@ import {View, Text, StyleSheet} from 'react-native'
 export default () => {
     return(
         <View style={styles.container}>
-            <Text>ITB NIM Finder</Text>
+            <Text style={styles.text}>ITB NIM Finder</Text>
         </View>
     )
 }
@@ -13,5 +13,9 @@ export default () => {
 const styles = StyleSheet.create({
     container:{
         alignItems:'center',
+        paddingVertical:20
+    },
+    text:{
+        fontSize:30,
     }
 })
