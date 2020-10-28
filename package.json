@@ -4,10 +4,10 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "yarn gatsby develop",
+    "web": "gatsby develop",
     "eject": "expo eject",
     "deploy": "gh-pages -d public",
-    "predeploy": "yarn gatsby build"
+    "predeploy": "gatsby build --prefix-paths"
   },
   "dependencies": {
     "@apollo/client": "^3.2.0",
