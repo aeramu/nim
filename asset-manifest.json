@@ -1,0 +1,25 @@
+{
+  "files": {
+    "app.js": "/nim-finder/static/js/app.57aa35a9.chunk.js",
+    "app.js.map": "/nim-finder/static/js/app.57aa35a9.chunk.js.map",
+    "runtime~app.js": "/nim-finder/static/js/runtime~app.bfc33435.js",
+    "runtime~app.js.map": "/nim-finder/static/js/runtime~app.bfc33435.js.map",
+    "static/js/2.09749930.chunk.js": "/nim-finder/static/js/2.09749930.chunk.js",
+    "static/js/2.09749930.chunk.js.map": "/nim-finder/static/js/2.09749930.chunk.js.map",
+    "fonts/AntDesign.ttf": "/nim-finder/./fonts/AntDesign.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/nim-finder/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/nim-finder/./fonts/FontAwesome5_Solid.ttf",
+    "favicon-16.png": "/nim-finder/favicon-16.png",
+    "favicon-32.png": "/nim-finder/favicon-32.png",
+    "favicon.ico": "/nim-finder/favicon.ico",
+    "index.html": "/nim-finder/index.html",
+    "manifest.json": "/nim-finder/manifest.json",
+    "serve.json": "/nim-finder/serve.json",
+    "static/js/2.09749930.chunk.js.LICENSE.txt": "/nim-finder/static/js/2.09749930.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.bfc33435.js",
+    "static/js/2.09749930.chunk.js",
+    "static/js/app.57aa35a9.chunk.js"
+  ]
+}
