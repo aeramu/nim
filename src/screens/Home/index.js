@@ -14,8 +14,11 @@ export default () => {
     const [timer, setTimer] = React.useState()
     const [search, {data, loading, fetchMore}] = useLazyQuery(SEARCH)
 
-    React.useEffect(async () => {
-        await Analytics.logEvent('Web accessed',{})
+    React.useEffect(() => {
+        const logAnalytic = async () => {
+            await Analytics.logEvent('Web accessed',{})
+        }
+        logAnalytic()
     },[])
 
     const loadMore = async () => {
@@ -45,7 +48,7 @@ export default () => {
 
     const onChangeText = (text) => {
         clearTimeout(timer)
-        if (text != ""){
+        if (text !== ""){
             setTimer(setTimeout(async () => {
                 search({
                     variables:{
@@ -70,7 +73,7 @@ export default () => {
                     onChangeText={(text) => onChangeText(text)} 
                     containerStyle={styles.searchBar}
                 />
-                {keyword == "" | timer
+                {keyword === "" | timer
                     ? <></>
                     : loading
                         ? <ActivityIndicator style={styles.activity}/>
