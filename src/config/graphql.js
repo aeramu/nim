@@ -1,7 +1,13 @@
-import {ApolloClient, InMemoryCache} from '@apollo/client'
+import {ApolloClient, InMemoryCache, createHttpLink} from '@apollo/client'
+import fetch from 'node-fetch'
+
+
+const link = createHttpLink({
+    uri: "https://owlfchiagi.execute-api.ap-southeast-1.amazonaws.com/graphql",
+    fetch: fetch,
+})
 
 export const client = new ApolloClient({
-    // uri: 'https://nim-finder-server.herokuapp.com',
-    uri: "https://owlfchiagi.execute-api.ap-southeast-1.amazonaws.com/graphql",
     cache: new InMemoryCache(),
+    link,
 })
