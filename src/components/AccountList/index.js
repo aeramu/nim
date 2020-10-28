@@ -4,6 +4,13 @@ import Account from './components/Account'
 import LoadMore from '../LoadMore'
 
 export default ({data, onPress, loadMore, containerStyle}) => {
+    if (data.length === 0){
+        data = [{
+            nama: "",
+            nimJurusan: "Tidak ada hasil",
+            jurusan: "",
+        }]
+    }
     return(
         <FlatList
             style={containerStyle}
@@ -20,8 +27,8 @@ export default ({data, onPress, loadMore, containerStyle}) => {
             renderItem={({item}) => (
                 <Account 
                     nama={item.nama} 
-                    nim={item.nimJurusan == "" ? item.nimTPB : item.nimJurusan}
-                    jurusan={item.jurusan == "" ? item.fakultas : item.jurusan}
+                    nim={item.nimJurusan === "" ? item.nimTPB : item.nimJurusan}
+                    jurusan={item.jurusan === "" ? item.fakultas : item.jurusan}
                     status={item.status}
                 />
             )}
